@@ -1,0 +1,106 @@
+{
+  "nav": {
+    "home": "Home",
+    "skills": "Skills",
+    "achievements": "Achievements",
+    "contact": "Contact",
+    "cv": "CV"
+  },
+  "home": {
+    "title": "Hi, I'm",
+    "name": "Đặng Ngọc Tiến",
+    "subtitle": "Developer & Instructor",
+    "description": "Specialized in Backend API development and Frontend UI/UX at company, also working as programming instructor at Teky. Passionate about sharing knowledge and creating quality technology products.",
+    "cta": "Get In Touch",
+    "download_cv": "Download CV"
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "subtitle": "Here are the technologies I work with",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools & Others",
+    "frontend_skills": [
+      "React",
+      "Vue.js",
+      "JavaScript",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "SASS"
+    ],
+    "backend_skills": [
+      "Node.js",
+      "Python",
+      "Java",
+      "PHP",
+      "Express.js",
+      "Django",
+      "Spring Boot",
+      "Laravel"
+    ],
+    "tools_skills": [
+      "Git",
+      "Docker",
+      "AWS",
+      "MongoDB",
+      "PostgreSQL",
+      "Redis",
+      "Figma",
+      "VS Code"
+    ]
+  },
+  "achievements": {
+    "title": "Projects & Achievements",
+    "subtitle": "Here are some of my recent projects and achievements",
+    "projects": [
+      {
+        "title": "E-commerce Platform",
+        "description": "A full-stack e-commerce platform built with React and Node.js",
+        "tech": ["React", "Node.js", "MongoDB", "Stripe"],
+        "link": "https://github.com/yourusername/ecommerce"
+      },
+      {
+        "title": "Task Management App",
+        "description": "A collaborative task management application with real-time updates",
+        "tech": ["Vue.js", "Socket.io", "Express.js", "PostgreSQL"],
+        "link": "https://github.com/yourusername/taskmanager"
+      },
+      {
+        "title": "Weather Dashboard",
+        "description": "A responsive weather dashboard with location-based forecasts",
+        "tech": ["React", "OpenWeather API", "Chart.js", "Tailwind CSS"],
+        "link": "https://github.com/yourusername/weather-dashboard"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "I'm always interested in new opportunities and interesting projects",
+    "email": "dangngoctien10062003@gmail.com",
+    "phone": "+84 123 456 789",
+    "location": "Ho Chi Minh City, Vietnam",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message"
+    }
+  },
+  "cv": {
+    "title": "Curriculum Vitae",
+    "subtitle": "Download my CV to learn more about my experience and qualifications",
+    "download": "Download CV",
+    "preview": "Preview CV"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "success": "Success!",
+    "dark_mode": "Dark Mode",
+    "light_mode": "Light Mode",
+    "language": "Language"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "skills": "Kỹ năng",
+    "achievements": "Thành tựu",
+    "contact": "Liên hệ",
+    "cv": "CV"
+  },
+  "home": {
+    "title": "Xin chào, tôi là",
+    "name": "Đặng Ngọc Tiến",
+    "subtitle": "Lập trình viên & Giảng viên",
+    "description": "Chuyên phát triển Backend API và Frontend UI/UX tại công ty, đồng thời là giảng viên lập trình tại Teky. Đam mê chia sẻ kiến thức và tạo ra những sản phẩm công nghệ chất lượng.",
+    "cta": "Liên hệ ngay",
+    "download_cv": "Tải CV"
+  },
+  "skills": {
+    "title": "Kỹ năng & Công nghệ",
+    "subtitle": "Đây là những công nghệ tôi làm việc",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Công cụ & Khác",
+    "frontend_skills": [
+      "React",
+      "Vue.js",
+      "JavaScript",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "SASS"
+    ],
+    "backend_skills": [
+      "Node.js",
+      "Python",
+      "Java",
+      "PHP",
+      "Express.js",
+      "Django",
+      "Spring Boot",
+      "Laravel"
+    ],
+    "tools_skills": [
+      "Git",
+      "Docker",
+      "AWS",
+      "MongoDB",
+      "PostgreSQL",
+      "Redis",
+      "Figma",
+      "VS Code"
+    ]
+  },
+  "achievements": {
+    "title": "Dự án & Thành tựu",
+    "subtitle": "Đây là một số dự án và thành tựu gần đây của tôi",
+    "projects": [
+      {
+        "title": "Nền tảng Thương mại điện tử",
+        "description": "Nền tảng thương mại điện tử full-stack được xây dựng với React và Node.js",
+        "tech": ["React", "Node.js", "MongoDB", "Stripe"],
+        "link": "https://github.com/yourusername/ecommerce"
+      },
+      {
+        "title": "Ứng dụng Quản lý Công việc",
+        "description": "Ứng dụng quản lý công việc cộng tác với cập nhật thời gian thực",
+        "tech": ["Vue.js", "Socket.io", "Express.js", "PostgreSQL"],
+        "link": "https://github.com/yourusername/taskmanager"
+      },
+      {
+        "title": "Bảng điều khiển Thời tiết",
+        "description": "Bảng điều khiển thời tiết phản hồi với dự báo dựa trên vị trí",
+        "tech": ["React", "OpenWeather API", "Chart.js", "Tailwind CSS"],
+        "link": "https://github.com/yourusername/weather-dashboard"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "subtitle": "Tôi luôn quan tâm đến những cơ hội mới và các dự án thú vị",
+    "email": "dangngoctien10062003@gmail.com",
+    "phone": "+84 123 456 789",
+    "location": "Thành phố Hồ Chí Minh, Việt Nam",
+    "form": {
+      "name": "Tên",
+      "email": "Email",
+      "subject": "Chủ đề",
+      "message": "Tin nhắn",
+      "send": "Gửi tin nhắn"
+    }
+  },
+  "cv": {
+    "title": "Sơ yếu lý lịch",
+    "subtitle": "Tải CV của tôi để tìm hiểu thêm về kinh nghiệm và trình độ chuyên môn",
+    "download": "Tải CV",
+    "preview": "Xem trước CV"
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "error": "Đã xảy ra lỗi",
+    "success": "Thành công!",
+    "dark_mode": "Chế độ tối",
+    "light_mode": "Chế độ sáng",
+    "language": "Ngôn ngữ"
+  }
+}
