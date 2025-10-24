@@ -1,27 +1,31 @@
 {
   "name": "personal-portfolio",
   "version": "1.0.0",
+  "homepage": "https://dangtien10062003.github.io/WEB_CV_Profile/",
   "description": "Modern Personal Portfolio Website with Dark Mode and Multi-language support",
   "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+     "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject",
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "i18next": "^22.4.10",
+    "lucide-react": "^0.263.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.8.1",
-    "react-scripts": "5.0.1",
-    "i18next": "^22.4.10",
     "react-i18next": "^12.1.5",
-    "lucide-react": "^0.263.1"
+    "react-router-dom": "^6.8.1",
+    "react-scripts": "5.0.1"
   },
   "devDependencies": {
-    "tailwindcss": "^3.2.7",
     "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.21"
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7"
   },
   "browserslist": {
     "production": [
