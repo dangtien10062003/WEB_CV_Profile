@@ -1,13 +1,15 @@
 {
   "files": {
     "main.css": "/WEB_CV_Profile/static/css/main.a847888f.css",
-    "main.js": "/WEB_CV_Profile/static/js/main.ec297778.js",
+    "main.js": "/WEB_CV_Profile/static/js/main.eb3945e1.js",
+    "static/media/tien.jpg": "/WEB_CV_Profile/static/media/tien.f375a02944b6ad425248.jpg",
+    "static/media/CV_DangNgocTien2.pdf": "/WEB_CV_Profile/static/media/CV_DangNgocTien2.6790b21ab4459b12994e.pdf",
     "index.html": "/WEB_CV_Profile/index.html",
     "main.a847888f.css.map": "/WEB_CV_Profile/static/css/main.a847888f.css.map",
-    "main.ec297778.js.map": "/WEB_CV_Profile/static/js/main.ec297778.js.map"
+    "main.eb3945e1.js.map": "/WEB_CV_Profile/static/js/main.eb3945e1.js.map"
   },
   "entrypoints": [
     "static/css/main.a847888f.css",
-    "static/js/main.ec297778.js"
+    "static/js/main.eb3945e1.js"
   ]
 }
