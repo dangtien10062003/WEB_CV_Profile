@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/WEB_CV_Profile/static/css/main.a847888f.css",
+    "main.js": "/WEB_CV_Profile/static/js/main.ec297778.js",
+    "index.html": "/WEB_CV_Profile/index.html",
+    "main.a847888f.css.map": "/WEB_CV_Profile/static/css/main.a847888f.css.map",
+    "main.ec297778.js.map": "/WEB_CV_Profile/static/js/main.ec297778.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a847888f.css",
+    "static/js/main.ec297778.js"
+  ]
+}
