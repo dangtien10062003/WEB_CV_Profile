@@ -5,12 +5,12 @@
   "description": "Modern Personal Portfolio Website with Dark Mode and Multi-language support",
   "main": "index.js",
   "scripts": {
-     "start": "react-scripts start",
-      "build": "react-scripts build",
-      "test": "react-scripts test",
-      "eject": "react-scripts eject",
-      "predeploy": "npm run build",
-      "deploy": "gh-pages -d build"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "i18next": "^22.4.10",
