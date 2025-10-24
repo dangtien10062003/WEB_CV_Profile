@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from '../hooks/useTranslation';
 import { Download, Github, Linkedin, Mail, Sparkles, Code, Coffee, User, Monitor, Server } from 'lucide-react';
 import CVUpload from '../components/CVUpload';
+import tienImage from '../assets/tien.jpg';
+import CV from '../assets/CV_DangNgocTien2.pdf';
 
 const Home = () => {
   const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
-  const [uploadedFile, setUploadedFile] = useState(null);
-  const [showUpload, setShowUpload] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -69,13 +69,12 @@ const Home = () => {
                 >
                   <span>{t('home.cta')}</span>
                 </button>
-                {uploadedFile ? (
                 <button 
                   className="btn-secondary flex items-center justify-center space-x-2 hover-lift cv-download-animation"
                   onClick={() => {
                     // Tải file CV thật của bạn
                     const link = document.createElement('a');
-                    link.href = '/CV_DangNgocTien2.pdf';
+                    link.href = CV;
                     link.download = 'CV_DangNgocTien2.pdf';
                     link.click();
                   }}
@@ -83,37 +82,7 @@ const Home = () => {
                   <Download className="w-5 h-5" />
                   <span>{t('home.download_cv')}</span>
                 </button>
-                ) : (
-                  <button 
-                    onClick={() => {
-                      const element = document.getElementById('cv');
-                      if (element) {
-                        element.scrollIntoView({ 
-                          behavior: 'smooth',
-                          block: 'start'
-                        });
-                      }
-                    }}
-                    className="btn-secondary flex items-center justify-center space-x-2 hover-lift"
-                  >
-                    <Download className="w-5 h-5" />
-                    <span>Tải lên CV</span>
-                  </button>
-                )}
               </div>
-
-              {/* CV Upload Section */}
-              {showUpload && !uploadedFile && (
-                <div className="mt-6 slide-up">
-                  <CVUpload 
-                    onFileSelect={(file) => {
-                      setUploadedFile(file);
-                      setShowUpload(false);
-                    }}
-                    currentFile={uploadedFile}
-                  />
-                </div>
-              )}
 
               {/* Social Links */}
               <div className="flex space-x-4 slide-in-left">
@@ -148,7 +117,7 @@ const Home = () => {
                 <div className="w-80 h-80 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center glow float">
                   <div className="w-72 h-72 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center overflow-hidden">
                     <img 
-                      src="/tien.jpg" 
+                      src={tienImage}  
                       alt="Đặng Ngọc Tiến" 
                       className="w-64 h-64 object-cover rounded-full"
                     />

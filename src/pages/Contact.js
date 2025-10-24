@@ -58,13 +58,7 @@ const Contact = () => {
       color: 'from-blue-500 to-blue-600',
       delay: 0
     },
-    {
-      icon: <Phone className="w-6 h-6 text-primary-600" />,
-      title: 'Phone',
-      value: t('contact.phone'),
-      color: 'from-green-500 to-green-600',
-      delay: 200
-    },
+
     {
       icon: <MapPin className="w-6 h-6 text-primary-600" />,
       title: 'Location',

@@ -4,6 +4,7 @@ import { Download, Eye, FileText } from 'lucide-react';
 import CVUpload from '../components/CVUpload';
 import CVContent from '../components/CVContent';
 import PDFViewer from '../components/PDFViewer';
+import CVFile from '../assets/CV_DangNgocTien2.pdf';
 
 const CV = () => {
   const { t } = useTranslation();
@@ -37,7 +38,7 @@ const CV = () => {
                   onClick={() => {
                     // Tải file CV thật của bạn
                     const link = document.createElement('a');
-                    link.href = '/CV_DangNgocTien2.pdf';
+                    link.href ={CVFile}; ;
                     link.download = 'CV_DangNgocTien2.pdf';
                     link.click();
                   }}
