@@ -13,6 +13,7 @@ const Skills = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  
   const skillCategories = [
     {
       icon: <Code className="w-8 h-8 text-primary-600" />,
