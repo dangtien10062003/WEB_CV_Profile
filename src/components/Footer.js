@@ -139,9 +139,7 @@ const Footer = () => {
             </h3>
             <div className="space-y-2 text-gray-600 dark:text-gray-300">
               <p>📧 dangngoctien10062003@gmail.com</p>
-              <p>📱 +84 123 456 789</p>
               <p>📍 Ho Chi Minh City, Vietnam</p>
-              <p>🏢 TNHH Hệ Thống Thông Tin Nam Việt ASA</p>
             </div>
           </div>
         </div>

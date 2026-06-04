@@ -71,22 +71,17 @@ const Contact = () => {
   const socialLinks = [
     {
       icon: <Github className="w-6 h-6" />,
-      href: 'https://github.com/yourusername',
+      href: 'https://github.com/dangtien10062003',
       label: 'GitHub',
       color: 'hover:bg-gray-900 hover:text-white'
     },
     {
       icon: <Linkedin className="w-6 h-6" />,
-      href: 'https://linkedin.com/in/yourusername',
+      href: 'https://www.linkedin.com/in/ti%E1%BA%BFn-%C4%91%E1%BA%B7ng-515906372/',
       label: 'LinkedIn',
       color: 'hover:bg-blue-600 hover:text-white'
     },
-    {
-      icon: <Twitter className="w-6 h-6" />,
-      href: 'https://twitter.com/yourusername',
-      label: 'Twitter',
-      color: 'hover:bg-blue-400 hover:text-white'
-    }
+    
   ];
 
   return (

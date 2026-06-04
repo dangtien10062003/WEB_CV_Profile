@@ -8,10 +8,51 @@ import CV from '../assets/CV_DangNgocTien2.pdf';
 const Home = () => {
   const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
+  
+  // Typewriter effect states
+  const roles = [
+    'Frontend Engineer',
+    'Full Stack Developer',
+    'AI Data Developer',
+    'Programming Instructor',
+    'Software Developer'
+  ];
+  
+  const [currentRole, setCurrentRole] = useState(0);
+  const [displayText, setDisplayText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  // Typewriter effect
+  useEffect(() => {
+    const currentFullText = roles[currentRole];
+    const typingSpeed = isDeleting ? 50 : 100;
+
+    const timer = setTimeout(() => {
+      if (!isDeleting) {
+        // Typing
+        if (displayText.length < currentFullText.length) {
+          setDisplayText(currentFullText.slice(0, displayText.length + 1));
+        } else {
+          // Pause before deleting
+          setTimeout(() => setIsDeleting(true), 2000);
+        }
+      } else {
+        // Deleting
+        if (displayText.length > 0) {
+          setDisplayText(displayText.slice(0, -1));
+        } else {
+          setIsDeleting(false);
+          setCurrentRole((prev) => (prev + 1) % roles.length);
+        }
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timer);
+  }, [displayText, isDeleting, currentRole, roles]);
 
   return (
     <section id="home" className="min-h-screen pt-16 overflow-hidden">
@@ -45,9 +86,14 @@ const Home = () => {
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold gradient-text bounce-in">
                   {t('home.name')}
                 </h2>
-                <h3 className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 slide-in-left">
-                  {t('home.subtitle')}
-                </h3>
+                
+                {/* Typewriter Effect for Role */}
+                <div className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 slide-in-left">
+                  <span className="text-primary-600 dark:text-primary-400 font-semibold">
+                    {displayText}
+                    <span className="animate-pulse text-primary-500">|</span>
+                  </span>
+                </div>
               </div>
               
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed slide-in-left">
@@ -65,12 +111,12 @@ const Home = () => {
                       });
                     }
                   }}
-                  className="btn-primary flex items-center justify-center space-x-2 hover-glow"
+                  className="btn-primary flex items-center justify-center space-x-2 hover-glow transform hover:scale-105 transition-all duration-300"
                 >
                   <span>{t('home.cta')}</span>
                 </button>
                 <button 
-                  className="btn-secondary flex items-center justify-center space-x-2 hover-lift cv-download-animation"
+                  className="btn-secondary flex items-center justify-center space-x-2 hover-lift cv-download-animation transform hover:scale-105 transition-all duration-300"
                   onClick={() => {
                     // Tải file CV thật của bạn
                     const link = document.createElement('a');
@@ -90,23 +136,23 @@ const Home = () => {
                   href="https://github.com/dangtien10062003"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 hover:scale-110 hover:rotate-12 hover-glow"
+                  className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 hover:scale-110 hover:rotate-12 hover-glow group"
                 >
-                  <Github className="w-6 h-6 text-gray-600 dark:text-gray-300" />
+                  <Github className="w-6 h-6 text-gray-600 dark:text-gray-300 group-hover:text-primary-600 transition-colors" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/ti%E1%BA%BFn-%C4%91%E1%BA%B7ng-515906372/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 hover:scale-110 hover:rotate-12 hover-glow"
+                  className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 hover:scale-110 hover:rotate-12 hover-glow group"
                 >
-                  <Linkedin className="w-6 h-6 text-gray-600 dark:text-gray-300" />
+                  <Linkedin className="w-6 h-6 text-gray-600 dark:text-gray-300 group-hover:text-blue-600 transition-colors" />
                 </a>
                 <a
                   href="mailto:dangngoctien10062003@gmail.com"
-                  className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 hover:scale-110 hover:rotate-12 hover-glow"
+                  className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 hover:scale-110 hover:rotate-12 hover-glow group"
                 >
-                  <Mail className="w-6 h-6 text-gray-600 dark:text-gray-300" />
+                  <Mail className="w-6 h-6 text-gray-600 dark:text-gray-300 group-hover:text-green-600 transition-colors" />
                 </a>
               </div>
             </div>
@@ -114,68 +160,77 @@ const Home = () => {
             {/* Image/Illustration */}
             <div className="flex justify-center lg:justify-end slide-in-right">
               <div className="relative">
-                <div className="w-80 h-80 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center glow float">
-                  <div className="w-72 h-72 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center overflow-hidden">
+                {/* Main Image Container */}
+                <div className="w-80 h-80 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center glow float relative overflow-hidden">
+                  <div className="w-72 h-72 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center overflow-hidden border-4 border-white/20">
                     <img 
                       src={tienImage}  
                       alt="Đặng Ngọc Tiến" 
-                      className="w-64 h-64 object-cover rounded-full"
+                      className="w-64 h-64 object-cover rounded-full hover:scale-110 transition-transform duration-500"
                     />
                   </div>
+                  
+                  {/* Rotating Border Effect */}
+                  <div className="absolute inset-0 rounded-full border-2 border-dashed border-primary-300 animate-spin" style={{animationDuration: '20s'}}></div>
                 </div>
-                {/* Floating Developer Icons */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full developer-jump flex items-center justify-center">
-                  <User className="w-4 h-4 text-white" />
+
+                {/* Enhanced Floating Developer Icons */}
+                <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full developer-jump flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow group">
+                  <User className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
                 </div>
-                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full developer-jump-2 flex items-center justify-center" style={{animationDelay: '1s'}}>
-                  <Monitor className="w-3 h-3 text-white" />
+                <div className="absolute -bottom-4 -left-4 w-10 h-10 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full developer-jump-2 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow group" style={{animationDelay: '1s'}}>
+                  <Monitor className="w-5 h-5 text-white group-hover:scale-110 transition-transform" />
                 </div>
-                <div className="absolute top-1/2 -left-8 w-4 h-4 bg-red-400 rounded-full developer-jump-3 flex items-center justify-center">
-                  <Server className="w-2 h-2 text-white" />
+                <div className="absolute top-1/2 -left-8 w-8 h-8 bg-gradient-to-br from-red-400 to-pink-500 rounded-full developer-jump-3 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow group">
+                  <Server className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
                 </div>
-                <div className="absolute top-1/4 -right-12 w-5 h-5 bg-blue-400 rounded-full developer-jump flex items-center justify-center" style={{animationDelay: '2s'}}>
-                  <Code className="w-2.5 h-2.5 text-white" />
+                <div className="absolute top-1/4 -right-12 w-10 h-10 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full developer-jump flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow group" style={{animationDelay: '2s'}}>
+                  <Code className="w-5 h-5 text-white group-hover:scale-110 transition-transform" />
                 </div>
-                <div className="absolute bottom-1/4 -right-6 w-3 h-3 bg-purple-400 rounded-full developer-jump-2 flex items-center justify-center" style={{animationDelay: '3s'}}>
-                  <Coffee className="w-1.5 h-1.5 text-white" />
+                <div className="absolute bottom-1/4 -right-6 w-6 h-6 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full developer-jump-2 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow group" style={{animationDelay: '3s'}}>
+                  <Coffee className="w-3 h-3 text-white group-hover:scale-110 transition-transform" />
                 </div>
+
+                {/* Additional Floating Elements */}
+                <div className="absolute top-10 left-10 w-4 h-4 bg-gradient-to-br from-teal-400 to-blue-500 rounded-full animate-bounce opacity-60" style={{animationDelay: '0.5s'}}></div>
+                <div className="absolute bottom-10 right-10 w-3 h-3 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full animate-bounce opacity-60" style={{animationDelay: '1.5s'}}></div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Enhanced Stats Section */}
       <section className="py-16 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary-500/5 to-purple-500/5"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center scroll-reveal hover-lift">
+            <div className="text-center scroll-reveal hover-lift group">
               <div className="relative">
-                <div className="text-4xl font-bold text-primary-600 mb-2 counter-animation">50+</div>
+                <div className="text-4xl font-bold text-primary-600 mb-2 counter-animation group-hover:scale-110 transition-transform">50+</div>
                 <div className="absolute -top-2 -right-2">
-                  <Code className="w-6 h-6 text-primary-400 animate-pulse" />
+                  <Code className="w-6 h-6 text-primary-400 animate-pulse group-hover:animate-bounce" />
                 </div>
               </div>
-              <div className="text-gray-600 dark:text-gray-300">Projects Completed</div>
+              <div className="text-gray-600 dark:text-gray-300 group-hover:text-primary-600 transition-colors">Projects Completed</div>
             </div>
-            <div className="text-center scroll-reveal hover-lift">
+            <div className="text-center scroll-reveal hover-lift group">
               <div className="relative">
-                <div className="text-4xl font-bold text-primary-600 mb-2 counter-animation">3+</div>
+                <div className="text-4xl font-bold text-primary-600 mb-2 counter-animation group-hover:scale-110 transition-transform">3+</div>
                 <div className="absolute -top-2 -right-2">
-                  <Coffee className="w-6 h-6 text-primary-400 animate-pulse" />
+                  <Coffee className="w-6 h-6 text-primary-400 animate-pulse group-hover:animate-bounce" />
                 </div>
               </div>
-              <div className="text-gray-600 dark:text-gray-300">Years Experience</div>
+              <div className="text-gray-600 dark:text-gray-300 group-hover:text-primary-600 transition-colors">Years Experience</div>
             </div>
-            <div className="text-center scroll-reveal hover-lift">
+            <div className="text-center scroll-reveal hover-lift group">
               <div className="relative">
-                <div className="text-4xl font-bold text-primary-600 mb-2 counter-animation">100%</div>
+                <div className="text-4xl font-bold text-primary-600 mb-2 counter-animation group-hover:scale-110 transition-transform">100%</div>
                 <div className="absolute -top-2 -right-2">
-                  <Sparkles className="w-6 h-6 text-primary-400 animate-pulse" />
+                  <Sparkles className="w-6 h-6 text-primary-400 animate-pulse group-hover:animate-bounce" />
                 </div>
               </div>
-              <div className="text-gray-600 dark:text-gray-300">Client Satisfaction</div>
+              <div className="text-gray-600 dark:text-gray-300 group-hover:text-primary-600 transition-colors">Client Satisfaction</div>
             </div>
           </div>
         </div>

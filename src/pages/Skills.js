@@ -184,12 +184,14 @@ const Skills = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
-                { skill: 'React/Next.js', level: 95, color: 'from-blue-500 to-blue-600' },
-                { skill: 'Node.js/Express', level: 90, color: 'from-green-500 to-green-600' },
-                { skill: 'TypeScript', level: 85, color: 'from-purple-500 to-purple-600' },
-                { skill: 'AWS/Cloud', level: 80, color: 'from-orange-500 to-orange-600' },
-                { skill: 'Database Design', level: 88, color: 'from-pink-500 to-pink-600' },
-                { skill: 'UI/UX Design', level: 75, color: 'from-indigo-500 to-indigo-600' }
+                { skill: 'React / TypeScript', level: 90, color: 'from-blue-500 to-blue-600' },
+                { skill: 'C# / .NET', level: 85, color: 'from-purple-500 to-purple-600' },
+                { skill: 'Java / Spring Boot', level: 85, color: 'from-orange-500 to-orange-600' },
+                { skill: 'Node.js / Express', level: 80, color: 'from-green-500 to-green-600' },
+                { skill: 'SQL Server / MySQL', level: 85, color: 'from-cyan-500 to-cyan-600' },
+                { skill: 'AI Tools (OpenClaw, AI Hammers)', level: 75, color: 'from-pink-500 to-pink-600' },
+                { skill: 'TailwindCSS / Vite', level: 90, color: 'from-teal-500 to-teal-600' },
+                { skill: 'MongoDB / NoSQL', level: 75, color: 'from-indigo-500 to-indigo-600' }
               ].map((item, index) => (
                 <div key={index} className="card hover-lift">
                   <div className="flex justify-between items-center mb-2">

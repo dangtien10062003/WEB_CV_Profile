@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Home",
+    "experience": "Experience",
     "skills": "Skills",
     "achievements": "Achievements",
     "contact": "Contact",
@@ -9,10 +10,53 @@
   "home": {
     "title": "Hi, I'm",
     "name": "Đặng Ngọc Tiến",
-    "subtitle": "Developer & Instructor",
-    "description": "Specialized in Backend API development and Frontend UI/UX at company, also working as programming instructor at Teky. Passionate about sharing knowledge and creating quality technology products.",
+    "subtitle": "Software Developer",
+    "description": "Frontend Engineer at ASA Soft, programming instructor at Teky, and Full Stack Developer at Hung Thinh Media. Passionate about building quality products, teaching kids to code, and leveraging AI tools to boost productivity.",
     "cta": "Get In Touch",
     "download_cv": "Download CV"
+  },
+  "experience": {
+    "page_title": "Experience & Education",
+    "page_subtitle": "My professional journey, education, skills, and hobbies",
+    "tab_experience": "Experience",
+    "tab_education": "Education",
+    "tab_skills": "Computer Skills",
+    "tab_sports": "Sports & Hobbies",
+    "modules": "Modules Developed",
+    "asa_location": "Ho Chi Minh City",
+    "asa_desc": "Developed and maintained multiple frontend modules for ASA Nam Viet System using modern web technologies.",
+    "asa_h1": "Developed modules: Landing, POS, Payment, Auth, and Order",
+    "asa_h2": "Worked with ReactJS, Vite, TailwindCSS, and TypeScript",
+    "asa_h3": "Integrated .NET APIs, optimized UI/UX, and built reusable components",
+    "asa_h4": "Supported testing, documentation, code review, and Agile teamwork",
+    "tma_location": "Ho Chi Minh City",
+    "tma_desc": "Internship focused on internal tool development and debugging support.",
+    "tma_h1": "Assisted in developing and maintaining internal tools",
+    "tma_h2": "Worked with web technologies and supported debugging tasks",
+    "tma_h3": "Gained experience in teamwork, software development workflows, and coding standards",
+    "teky_role": "Lecturer / Technology Tutor",
+    "teky_location": "Ho Chi Minh City",
+    "teky_desc": "Teaching programming and technology courses for children, designing STEM learning projects.",
+    "teky_h1": "Taught programming and technology courses for children",
+    "teky_h2": "Designed mini-game and STEM learning projects",
+    "teky_h3": "Applied teaching methodologies and followed Teky's nationwide educational workflow",
+    "ht_role": "AI Data & Full Stack Developer",
+    "ht_location": "Ho Chi Minh City",
+    "ht_desc": "Working on AI data processing, full-stack development, and deploying AI Agents to automate business operations.",
+    "ht_h1": "Worked on AI data processing, full-stack development, and business data analysis",
+    "ht_h2": "Built web systems, managed databases, integrated APIs, and automated business workflows",
+    "ht_h3": "Configured and deployed AI Agents using OpenClaw and AI Hammers to improve productivity",
+    "ht_h4": "Supported reporting systems and data-driven business solutions",
+    "edu_school": "Ho Chi Minh City University of Industry and Trade",
+    "edu_major": "Bachelor's Degree – Information Systems",
+    "edu_desc": "Studied information systems with focus on software development, database management, and system analysis & design.",
+    "sports_title": "Sports & Hobbies",
+    "sports_subtitle": "Staying active and sharp through sports",
+    "teamwork_title": "Teamwork Skills",
+    "teamwork_1": "Effective communication and collaboration",
+    "teamwork_2": "Agile / Scrum methodology experience",
+    "teamwork_3": "Code review and knowledge sharing",
+    "teamwork_4": "Cross-functional team coordination"
   },
   "skills": {
     "title": "Skills & Technologies",
@@ -22,6 +66,7 @@
     "tools": "Tools & Others",
     "frontend_skills": [
       "React",
+      "Angular",
       "Vue.js",
       "JavaScript",
       "TypeScript",
@@ -32,46 +77,49 @@
     ],
     "backend_skills": [
       "Node.js",
+      "C# / .NET",
+      "Java / Spring Boot",
       "Python",
-      "Java",
       "PHP",
       "Express.js",
       "Django",
-      "Spring Boot",
       "Laravel"
     ],
     "tools_skills": [
       "Git",
       "Docker",
-      "AWS",
+      "SQL Server",
+      "MySQL",
       "MongoDB",
-      "PostgreSQL",
       "Redis",
       "Figma",
-      "VS Code"
+      "VS Code",
+      "Visual Studio",
+      "OpenClaw",
+      "AI Hammers"
     ]
   },
   "achievements": {
     "title": "Projects & Achievements",
-    "subtitle": "Here are some of my recent projects and achievements",
+    "subtitle": "Here are some of my key projects",
     "projects": [
       {
-        "title": "E-commerce Platform",
-        "description": "A full-stack e-commerce platform built with React and Node.js",
-        "tech": ["React", "Node.js", "MongoDB", "Stripe"],
-        "link": "https://github.com/yourusername/ecommerce"
+        "title": "Fashion Shop Management Software",
+        "description": "Merchandise management, sales system, inventory management built with C# and Visual Studio 2022.",
+        "tech": ["C#", "Visual Studio 2022", "SQL Server"],
+        "link": "https://github.com/dangtien10062003"
       },
       {
-        "title": "Task Management App",
-        "description": "A collaborative task management application with real-time updates",
-        "tech": ["Vue.js", "Socket.io", "Express.js", "PostgreSQL"],
-        "link": "https://github.com/yourusername/taskmanager"
+        "title": "Construction Materials Management App",
+        "description": "Material management, employee management, inventory management built with C# .NET and SQL Server 2019.",
+        "tech": ["C#", ".NET", "SQL Server 2019", "Visual Studio 2022"],
+        "link": "https://github.com/dangtien10062003"
       },
       {
-        "title": "Weather Dashboard",
-        "description": "A responsive weather dashboard with location-based forecasts",
-        "tech": ["React", "OpenWeather API", "Chart.js", "Tailwind CSS"],
-        "link": "https://github.com/yourusername/weather-dashboard"
+        "title": "Library Management Software",
+        "description": "Book management, loan and return process, inventory management built with Java Spring Boot and MySQL.",
+        "tech": ["Java", "Spring Boot", "MySQL", "Spring Tool Suite 4"],
+        "link": "https://github.com/dangtien10062003"
       }
     ]
   },
@@ -79,7 +127,7 @@
     "title": "Get In Touch",
     "subtitle": "I'm always interested in new opportunities and interesting projects",
     "email": "dangngoctien10062003@gmail.com",
-    "phone": "+84 123 456 789",
+    "phone": "+84 812 500 739",
     "location": "Ho Chi Minh City, Vietnam",
     "form": {
       "name": "Name",

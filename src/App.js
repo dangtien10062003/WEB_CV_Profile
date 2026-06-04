@@ -11,6 +11,7 @@ import Skills from './pages/Skills';
 import Achievements from './pages/Achievements';
 import Contact from './pages/Contact';
 import CV from './pages/CV';
+import Experience from './pages/Experience';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Navbar />
           <main>
             <Home />
+            <Experience />
             <Skills />
             <Achievements />
             <Contact />
