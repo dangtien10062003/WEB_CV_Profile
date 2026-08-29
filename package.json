@@ -1,7 +1,7 @@
 {
   "name": "personal-portfolio",
   "version": "1.0.0",
-  "homepage": "https://dangtien10062003.github.io/WEB_CV_Profile/",
+  "homepage": "/",
   "description": "Modern Personal Portfolio Website with Dark Mode and Multi-language support",
   "main": "index.js",
   "scripts": {
