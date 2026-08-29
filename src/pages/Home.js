@@ -54,8 +54,8 @@ const Home = () => {
           </div>
 
           <p className="text-lg font-medium text-zinc-400">{t('home.title')}</p>
-          <h1 className="mt-3 max-w-4xl text-6xl font-black leading-none text-white sm:text-7xl lg:text-8xl">
-            <span className="gradient-text">{t('home.name')}</span>
+          <h1 className="hero-name mt-3 max-w-4xl text-6xl font-black leading-none sm:text-7xl lg:text-8xl">
+            {t('home.name')}
           </h1>
 
           <div className="mt-6 h-10 text-xl font-semibold text-teal-200 sm:text-2xl">

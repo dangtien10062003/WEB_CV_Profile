@@ -234,6 +234,14 @@
   animation: portraitFloat 7s ease-in-out infinite;
 }
 
+.hero-name {
+  color: #ffffff;
+  text-shadow:
+    0 2px 0 rgba(15, 23, 42, 0.48),
+    0 0 28px rgba(94, 234, 212, 0.38),
+    0 18px 60px rgba(0, 0, 0, 0.58);
+}
+
 .hero-portrait::before {
   content: "";
   position: absolute;
@@ -416,6 +424,14 @@ html:not(.dark) .glass-panel span.text-white {
 
 html:not(.dark) .hero-portrait::before {
   border-color: rgba(13, 148, 136, 0.28);
+}
+
+html:not(.dark) .portfolio-app .hero-name {
+  color: #07111f;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.95),
+    0 0 22px rgba(20, 184, 166, 0.2),
+    0 18px 48px rgba(15, 23, 42, 0.18);
 }
 
 html:not(.dark) .portfolio-app [class*="shadow-black"] {
