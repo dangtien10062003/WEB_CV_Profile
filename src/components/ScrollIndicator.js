@@ -17,10 +17,10 @@ const ScrollIndicator = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-40 animate-bounce">
-      <div className="flex flex-col items-center space-y-2 text-gray-600 dark:text-gray-400">
+    <div className="fixed bottom-8 left-1/2 z-40 hidden -translate-x-1/2 transform animate-bounce md:block">
+      <div className="flex flex-col items-center space-y-2 text-zinc-400">
         <span className="text-sm font-medium">Scroll to explore</span>
-        <ChevronDown className="w-6 h-6 animate-pulse" />
+        <ChevronDown className="w-6 h-6 animate-pulse text-teal-200" />
       </div>
     </div>
   );

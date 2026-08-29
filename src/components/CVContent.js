@@ -68,8 +68,8 @@ const CVContent = ({ file, onDownload, onPreview }) => {
           onClick={() => {
             // Tải file CV thật của bạn
             const link = document.createElement('a');
-            link.href = '/CV_DangNgocTien2.pdf';
-            link.download = 'CV_DangNgocTien2.pdf';
+            link.href = '/SOFT_DEV.pdf';
+            link.download = 'SOFT_DEV.pdf';
             link.click();
           }}
           className="btn-primary flex items-center space-x-2"
@@ -80,7 +80,7 @@ const CVContent = ({ file, onDownload, onPreview }) => {
         <button
           onClick={() => {
             // Mở CV thật của bạn trong tab mới
-            window.open('/CV_DangNgocTien2.pdf', '_blank');
+            window.open('/SOFT_DEV.pdf', '_blank');
           }}
           className="btn-secondary flex items-center space-x-2"
         >

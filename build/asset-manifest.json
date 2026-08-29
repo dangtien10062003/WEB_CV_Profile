@@ -1,13 +1,20 @@
 {
   "files": {
-    "main.css": "/WEB_CV_Profile/static/css/main.a847888f.css",
-    "main.js": "/WEB_CV_Profile/static/js/main.ec297778.js",
+    "main.css": "/WEB_CV_Profile/static/css/main.2861bb14.css",
+    "main.js": "/WEB_CV_Profile/static/js/main.4d3fe331.js",
+    "static/media/james-dang-logo.png": "/WEB_CV_Profile/static/media/james-dang-logo.2a999f27fb65ecf9a77d.png",
+    "static/media/carpe-d-website.png": "/WEB_CV_Profile/static/media/carpe-d-website.d59dea4ed34af50e1e2b.png",
+    "static/media/tien.jpg": "/WEB_CV_Profile/static/media/tien.f375a02944b6ad425248.jpg",
+    "static/media/ai-customer-service-chatbot.png": "/WEB_CV_Profile/static/media/ai-customer-service-chatbot.577dd09ea0849f8de5fa.png",
+    "static/media/ai-content-facebook-auto-posting.png": "/WEB_CV_Profile/static/media/ai-content-facebook-auto-posting.f2be85d38423b9018525.png",
+    "static/media/SOFT_DEV.pdf": "/WEB_CV_Profile/static/media/SOFT_DEV.ee84734b91e6ad35171c.pdf",
+    "static/media/hotel-resort-restaurant-management.png": "/WEB_CV_Profile/static/media/hotel-resort-restaurant-management.f3a8a1afdca1d1c6dd92.png",
     "index.html": "/WEB_CV_Profile/index.html",
-    "main.a847888f.css.map": "/WEB_CV_Profile/static/css/main.a847888f.css.map",
-    "main.ec297778.js.map": "/WEB_CV_Profile/static/js/main.ec297778.js.map"
+    "main.2861bb14.css.map": "/WEB_CV_Profile/static/css/main.2861bb14.css.map",
+    "main.4d3fe331.js.map": "/WEB_CV_Profile/static/js/main.4d3fe331.js.map"
   },
   "entrypoints": [
-    "static/css/main.a847888f.css",
-    "static/js/main.ec297778.js"
+    "static/css/main.2861bb14.css",
+    "static/js/main.4d3fe331.js"
   ]
 }

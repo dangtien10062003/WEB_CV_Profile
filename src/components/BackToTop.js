@@ -29,7 +29,7 @@ const BackToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-8 right-8 z-50 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 animate-bounce"
+      className="fixed bottom-8 right-8 z-50 rounded-lg border border-white/10 bg-white text-zinc-950 p-3 shadow-2xl shadow-black/30 transition-all duration-300 hover:-translate-y-1 hover:bg-teal-200"
       aria-label="Back to top"
     >
       <ChevronUp className="w-6 h-6" />

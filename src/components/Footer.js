@@ -1,159 +1,49 @@
 import React from 'react';
-import { useTranslation } from '../hooks/useTranslation';
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   return (
-    <footer className="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* About */}
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Đặng Ngọc Tiến
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Full Stack Developer với đam mê tạo ra những ứng dụng web hiện đại và thân thiện với người dùng.
-            </p>
-            <div className="flex space-x-4">
-              <a
-                href="https://github.com/dangngoctien"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-primary-100 dark:hover:bg-primary-900/20 transition-colors duration-200"
-              >
-                <Github className="w-5 h-5 text-gray-600 dark:text-gray-300" />
-              </a>
-              <a
-                href="https://linkedin.com/in/dangngoctien"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-primary-100 dark:hover:bg-primary-900/20 transition-colors duration-200"
-              >
-                <Linkedin className="w-5 h-5 text-gray-600 dark:text-gray-300" />
-              </a>
-              <a
-                href="mailto:dangngoctien10062003@gmail.com"
-                className="p-2 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-primary-100 dark:hover:bg-primary-900/20 transition-colors duration-200"
-              >
-                <Mail className="w-5 h-5 text-gray-600 dark:text-gray-300" />
-              </a>
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Liên kết nhanh
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <button 
-                  onClick={() => {
-                    const element = document.getElementById('home');
-                    if (element) {
-                      element.scrollIntoView({ 
-                        behavior: 'smooth',
-                        block: 'start'
-                      });
-                    }
-                  }}
-                  className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
-                >
-                  Trang chủ
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => {
-                    const element = document.getElementById('skills');
-                    if (element) {
-                      element.scrollIntoView({ 
-                        behavior: 'smooth',
-                        block: 'start'
-                      });
-                    }
-                  }}
-                  className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
-                >
-                  Kỹ năng
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => {
-                    const element = document.getElementById('achievements');
-                    if (element) {
-                      element.scrollIntoView({ 
-                        behavior: 'smooth',
-                        block: 'start'
-                      });
-                    }
-                  }}
-                  className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
-                >
-                  Dự án
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => {
-                    const element = document.getElementById('contact');
-                    if (element) {
-                      element.scrollIntoView({ 
-                        behavior: 'smooth',
-                        block: 'start'
-                      });
-                    }
-                  }}
-                  className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
-                >
-                  Liên hệ
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => {
-                    const element = document.getElementById('cv');
-                    if (element) {
-                      element.scrollIntoView({ 
-                        behavior: 'smooth',
-                        block: 'start'
-                      });
-                    }
-                  }}
-                  className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
-                >
-                  CV
-                </button>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Thông tin liên hệ
-            </h3>
-            <div className="space-y-2 text-gray-600 dark:text-gray-300">
-              <p>📧 dangngoctien10062003@gmail.com</p>
-              <p>📍 Ho Chi Minh City, Vietnam</p>
-            </div>
+    <footer className="border-t border-white/10 bg-zinc-950/70 backdrop-blur-xl">
+      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-[1fr_auto] lg:px-8">
+        <div>
+          <h3 className="text-lg font-bold text-white">Ngoc Tien Dang</h3>
+          <p className="mt-2 max-w-xl text-sm leading-6 text-zinc-400">
+            Software Development profile focused on ReactJS, C# ASP.NET Core, SQL Server, AI APIs, and automation workflows.
+          </p>
+          <div className="mt-5 flex gap-3">
+            <a href="https://github.com/dangtien10062003" target="_blank" rel="noopener noreferrer" className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 bg-white/5 text-zinc-300 transition hover:bg-white/10 hover:text-white">
+              <Github className="h-5 w-5" />
+            </a>
+            <a href="https://www.linkedin.com/in/ti%E1%BA%BFn-%C4%91%E1%BA%B7ng-515906372/" target="_blank" rel="noopener noreferrer" className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 bg-white/5 text-zinc-300 transition hover:bg-white/10 hover:text-white">
+              <Linkedin className="h-5 w-5" />
+            </a>
+            <a href="mailto:dangngoctien10062003@gmail.com" className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 bg-white/5 text-zinc-300 transition hover:bg-white/10 hover:text-white">
+              <Mail className="h-5 w-5" />
+            </a>
           </div>
         </div>
 
-        <div className="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-600 dark:text-gray-300 text-sm">
-              © 2024 Đặng Ngọc Tiến. Tất cả quyền được bảo lưu.
-            </p>
-            <p className="text-gray-600 dark:text-gray-300 text-sm flex items-center mt-2 md:mt-0">
-              Được tạo với <Heart className="w-4 h-4 text-red-500 mx-1" /> và React
-            </p>
-          </div>
+        <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm text-zinc-400 sm:grid-cols-3">
+          {[
+            ['home', 'Home'],
+            ['experience', 'Experience'],
+            ['skills', 'Skills'],
+            ['achievements', 'Projects'],
+            ['contact', 'Contact'],
+            ['cv', 'CV'],
+          ].map(([id, label]) => (
+            <button key={id} onClick={() => scrollToSection(id)} className="text-left transition hover:text-white">
+              {label}
+            </button>
+          ))}
         </div>
+      </div>
+      <div className="border-t border-white/10 px-4 py-5 text-center text-xs text-zinc-500">
+        © 2026 Ngoc Tien Dang. Built with React and Tailwind CSS.
       </div>
     </footer>
   );

@@ -1,100 +1,61 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from '../hooks/useTranslation';
 import { Download, Eye, FileText } from 'lucide-react';
-import CVUpload from '../components/CVUpload';
-import CVContent from '../components/CVContent';
-import PDFViewer from '../components/PDFViewer';
-import CVFile from '../assets/CV_DangNgocTien2.pdf';
+import CVFile from '../assets/SOFT_DEV.pdf';
 
 const CV = () => {
   const { t } = useTranslation();
-  const [uploadedFile, setUploadedFile] = useState(null);
-  const [showPDFViewer, setShowPDFViewer] = useState(false);
+
+  const downloadCV = () => {
+    const link = document.createElement('a');
+    link.href = CVFile;
+    link.download = 'SOFT_DEV.pdf';
+    link.click();
+  };
 
   return (
-    <section id="cv" className="min-h-screen pt-16">
-      <div className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              {t('cv.title')}
-            </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              {t('cv.subtitle')}
-            </p>
-            
-            {!uploadedFile ? (
-              <div className="w-full max-w-md mx-auto">
-                <CVUpload 
-                  onFileSelect={setUploadedFile}
-                  currentFile={uploadedFile}
-                />
-              </div>
-            ) : (
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button 
-                  className="btn-primary flex items-center justify-center space-x-2 cv-download-animation"
-                  onClick={() => {
-                    // Tải file CV thật của bạn
-                    const link = document.createElement('a');
-                    link.href ={CVFile}; ;
-                    link.download = 'CV_DangNgocTien2.pdf';
-                    link.click();
-                  }}
-                >
-                  <Download className="w-5 h-5" />
-                  <span>{t('cv.download')}</span>
-                </button>
-                <button 
-                  className="btn-secondary flex items-center justify-center space-x-2 hover-lift"
-                  onClick={() => {
-                    // Mở CV thật của bạn trong tab mới
-                    window.open('/CV_DangNgocTien2.pdf', '_blank');
-                  }}
-                >
-                  <Eye className="w-5 h-5" />
-                  <span>{t('cv.preview')}</span>
-                </button>
-              </div>
-            )}
+    <section id="cv" className="relative overflow-hidden">
+      <div className="section-shell">
+        <div className="glass-panel grid gap-8 p-6 sm:p-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
+          <div>
+            <div className="section-kicker">
+              <FileText className="mr-2 h-3.5 w-3.5" />
+              Resume
+            </div>
+            <h2 className="section-title">{t('cv.title')}</h2>
+            <p className="section-copy">{t('cv.subtitle')}</p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <button onClick={downloadCV} className="btn-primary">
+                <Download className="h-4 w-4" />
+                {t('cv.download')}
+              </button>
+              <a href={CVFile} target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                <Eye className="h-4 w-4" />
+                {t('cv.preview')}
+              </a>
+            </div>
           </div>
 
-          {/* CV Content */}
-          {uploadedFile ? (
-            <CVContent 
-              file={uploadedFile}
-              onDownload={() => {
-                const url = URL.createObjectURL(uploadedFile);
-                const link = document.createElement('a');
-                link.href = url;
-                link.download = uploadedFile.name;
-                link.click();
-                URL.revokeObjectURL(url);
-              }}
-              onPreview={() => setShowPDFViewer(true)}
-            />
-          ) : (
-            <div className="card text-center py-12">
-              <div className="w-24 h-24 bg-gray-100 dark:bg-gray-800 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <FileText className="w-12 h-12 text-gray-400" />
+          <div className="rounded-lg border border-white/10 bg-zinc-950/70 p-5">
+            <div className="mb-4 flex items-center justify-between border-b border-white/10 pb-4">
+              <div>
+                <h3 className="font-bold text-white">SOFT_DEV.pdf</h3>
+                <p className="text-sm text-zinc-500">PDF document</p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                Chưa có CV
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Hãy tải lên CV của bạn để xem nội dung chi tiết
-              </p>
+              <FileText className="h-8 w-8 text-teal-200" />
             </div>
-          )}
-
-          {/* PDF Viewer Modal */}
-          {showPDFViewer && (
-            <PDFViewer 
-              file={uploadedFile}
-              onClose={() => setShowPDFViewer(false)}
-            />
-          )}
+            <div className="space-y-3">
+              <div className="h-3 w-3/4 rounded bg-white/20" />
+              <div className="h-3 w-full rounded bg-white/10" />
+              <div className="h-3 w-5/6 rounded bg-white/10" />
+              <div className="mt-6 grid grid-cols-2 gap-3">
+                <div className="h-24 rounded border border-white/10 bg-white/[0.04]" />
+                <div className="h-24 rounded border border-white/10 bg-white/[0.04]" />
+              </div>
+              <div className="h-3 w-2/3 rounded bg-white/10" />
+              <div className="h-3 w-full rounded bg-white/10" />
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import ScrollIndicator from './components/ScrollIndicator';
 import ScrollProgress from './components/ScrollProgress';
 import BackToTop from './components/BackToTop';
+import AmbientScene from './components/AmbientScene';
 import Home from './pages/Home';
 import Skills from './pages/Skills';
 import Achievements from './pages/Achievements';
@@ -17,7 +18,8 @@ function App() {
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+        <div className="portfolio-app min-h-screen text-white transition-colors duration-300">
+          <AmbientScene />
           <ScrollProgress />
           <Navbar />
           <main>
